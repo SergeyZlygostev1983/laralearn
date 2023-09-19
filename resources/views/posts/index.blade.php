@@ -1,6 +1,9 @@
+<div>Список новостей</div>
+<hr>
+<a href="/posts/create">Create post</a>
+<hr>
 <ul>
-    {{-- @dd($posts) --}}
     @foreach ($posts as $post)
-        <li>Новость №{{$post['id']}}</li>
+        <li><a href="/posts/{{$post->id}}">Новость №{{$post->id}}</a> - <i>{{$post->title}}</i></li>
     @endforeach
 </ul>
